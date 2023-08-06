@@ -1,4 +1,12 @@
 var main = document.getElementById('root');
+document.getElementById("footer").innerHTML=`  <footer class="bg-green-100 bg-opacity-75 text-slate-900 fixed bottom-1 rounded-lg shadow m-4">
+<div class="w-full flex justify-center mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-slate-900 sm:text-center " >Made With ❤️ <a
+            href="https://niraj-ghetiya.vercel.app/" class="hover:underline">Niraj Ghetiya™</a>.
+    </span>
+<!-- <input type="email" name="" id="" required> -->
+</div>
+</footer>`;
 var name;
 var email;
 var password;
@@ -32,10 +40,12 @@ firebase.initializeApp(firebaseConfig);
  
 
 
-main.innerHTML = ` <div class="flex justify-center items-center m-auto min-h-screen">
+main.innerHTML = ` 
+
+<div class="flex justify-center items-center min-h-screen ">
 <button type="button" class=" bg-opacity-70 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 " id="signup">SignUp</button>
 <button type="button" class="bg-opacity-70  py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 " id="login">Login</button>
-</div>`;
+</div></div>`;
 
 document.getElementById("signup").addEventListener("click",signup);
 document.getElementById("login").addEventListener("click",login);
@@ -233,7 +243,7 @@ function chackOtp(otp){
     if(uotp==otp){
         signupOk()
         body = `<h1>${name}</h1><h2>Successfully register</h2>
-        <a href="">login using this link</a>
+        <a href="https://login-system-mu.vercel.app/">login using this link</a>
         `;
         sub=`Successfully`;
 
